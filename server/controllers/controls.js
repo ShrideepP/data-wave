@@ -8,6 +8,7 @@ const home = (req, res) => {
 const insertData = async (req, res) => {
   try {
     await Data.insertMany(jsonData);
+    res.status(201).json({ message: "Success" });
   } catch (error) {
     res.status(401).json({ message: error.message });
   }
