@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const jsonData = require("../data.json");
 
 const dashboardSchema = mongoose.Schema({
   end_year: String,
@@ -22,6 +21,5 @@ const dashboardSchema = mongoose.Schema({
 });
 
 const Data = mongoose.model("dashboard", dashboardSchema);
-Data.insertMany(jsonData);
 
 module.exports = Data;
