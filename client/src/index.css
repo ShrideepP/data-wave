@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .vertical-space {
+    @apply py-4 md:px-8 lg:px-12;
+  }
+  .horizontal-space {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+}
