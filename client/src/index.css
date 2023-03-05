@@ -4,11 +4,75 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  transition: 250ms, max-height 500ms;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -8px;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 8px;
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .my-masonry-grid {
+    margin-left: -16px;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 16px;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .my-masonry-grid {
+    margin-left: -24px;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: 24px;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 24px;
+  }
+}
+
 @layer base {
   .vertical-space {
-    @apply py-4 md:px-8 lg:px-12;
+    @apply py-8 md:px-14 lg:px-20;
   }
+
   .horizontal-space {
     @apply px-4 md:px-6 lg:px-8;
+  }
+
+  .card-space {
+    @apply p-2 md:p-4 lg:p-6;
+  }
+
+  .component-gap {
+    @apply gap-2 md:gap-4 lg:gap-6;
   }
 }

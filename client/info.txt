@@ -1,0 +1,23 @@
+FILTERS
+-------
+1. Topics
+2. Sector
+3. Region
+4. Pestle
+5. Source
+6. Country
+
+VARIABLES AND POSSIBLE Values
+-----------------------------
+
+1. Topics => '', 'export', 'growth', 'oil', 'gas', 'fracking', 'war', 'energy', 'coal', 'security', 'money', 'car', 'pollution', 'economy', 'unemployment', 'market', 'Washington', 'production', 'material', 'gdp', 'investment', 'government', 'consumer', 'robot', 'biofuel' 
+
+2. Sector => '', 'Retail', 'Manufacturing', 'Financial services', 'Energy', 'Environment', 'Support services', 'Government, Information Technology, Media & entertainment, Aerospace & defence', 'Water, Food & Agriculture', 'Security', 'Transport', 'Healthcare', 'Construction', 'Automotive, Tourism & hospitality'
+
+3. Region => '', 'World', 'Northern America', 'Eastern Europe', 'Central America', 'Western Asia', 'Southern Asia', 'Europe', 'Western Africa', 'Asia', 'South-Eastern Asia', 'Eastern Asia', 'Oceania', 'Northern Africa', 'Southern Europe', 'Northern Europe', 'South America', 'Western Europe', 'Africa', 'Central Africa', 'Central Asia', 'Eastern Africa', 'Southern Africa'
+
+4. Pestle => '', 'Economic', 'Environmental', 'Social', 'Industries', 'Political', 'Technological', 'Organization', 'Healthcare', 'Lifestyles'
+
+5. Source => 'Wikipedia', 'Bloomberg Business', 'CNBC ', 'Engineering News', 'IHS Engineering 360', 'Europe in My Region', 'Rigzone', 'CNNMoney', 'Foreign Policy', 'UNEP', 'Imeche', 'McKinsey & Company', 'energy news cyprus', 'uschamber', 'Infracircle', 'Oil and Gas Journal', 'Face2face Africa', 'The American Prospect', 'Washington Post', 'marketrealist', 'EPS News', 'dailytexanonline', 'Australian Government', 'conferenceseries', 'greenerearthnews'
+
+6. Country => 'United States of America', 'Poland', 'Belize', 'Cyprus', 'India', 'Nigeria', 'Canada', 'Indonesia', 'Iraq', 'Syria', 'China', 'Libya', 'Iran', 'Egypt', 'Ghana', 'Mexico', 'United Kingdom', 'Russia', 'Turkey', 'Japan', 'Venezuela', 'Algeria', 'Saudi Arabia', 'Jordan'
