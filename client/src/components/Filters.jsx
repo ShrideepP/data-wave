@@ -26,8 +26,8 @@ const Filters = ({ slider, setSlider }) => {
 
       <div
         className={`${
-          slider ? "w-3/4" : "w-0"
-        } h-screen fixed top-0 left-0 md:hidden overflow-y-scroll overflow-x-hidden bg-secondary dark:bg-dark-secondary border-r-2 border-tirtiary dark:border-dark-tirtiary`}
+          slider ? "w-3/4 border-r-2" : "w-0"
+        } h-screen fixed top-0 left-0 md:hidden overflow-y-scroll overflow-x-hidden bg-secondary dark:bg-dark-secondary border-tirtiary dark:border-dark-tirtiary`}
       >
         <div className="w-full h-[10vh] horizontal-space flex items-center justify-between">
           <div className="flex items-center gap-x-2 z-50">
