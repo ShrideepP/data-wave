@@ -24,7 +24,7 @@ const Dropdown = ({
       <div
         className={`min-w-full max-w-fit ${
           dropdown ? "max-h-[100rem]" : "max-h-0"
-        } flex flex-col cursor-pointer whitespace-nowrap absolute top-full left-2/4 -translate-x-2/4 overflow-y-hidden bg-secondary dark:bg-dark-secondary border border-t-0 border-tirtiary dark:border-dark-tirtiary`}
+        } flex flex-col cursor-pointer z-50 whitespace-nowrap absolute top-full left-2/4 -translate-x-2/4 overflow-y-hidden bg-secondary dark:bg-dark-secondary border border-t-0 border-tirtiary dark:border-dark-tirtiary`}
       >
         {children}
       </div>

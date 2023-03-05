@@ -11,7 +11,7 @@ const Filters = ({ slider, setSlider }) => {
     <div className="w-full h-fit z-50">
       <div className="h-[10vh] hidden md:flex justify-between items-center">
         <div className="h-full flex gap-x-6">
-          <button className="flex items-center gap-x-2">
+          <button className="flex items-center gap-x-2 cursor-default">
             <BsFilterRight className="text-2xl text-accent" />
             <span className="text-sm text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase">
               Filters

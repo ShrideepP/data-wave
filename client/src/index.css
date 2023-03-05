@@ -18,34 +18,20 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -8px;
+  margin-left: -16px;
   width: auto;
 }
 
 .my-masonry-grid_column {
-  padding-left: 8px;
+  padding-left: 16px;
   background-clip: padding-box;
 }
 
 .my-masonry-grid_column > div {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
-  .my-masonry-grid {
-    margin-left: -16px;
-  }
-
-  .my-masonry-grid_column {
-    padding-left: 16px;
-  }
-
-  .my-masonry-grid_column > div {
-    margin-bottom: 16px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
   .my-masonry-grid {
     margin-left: -24px;
   }
@@ -69,10 +55,10 @@
   }
 
   .card-space {
-    @apply p-2 md:p-4 lg:p-6;
+    @apply p-2 md:p-4;
   }
 
   .component-gap {
-    @apply gap-2 md:gap-4 lg:gap-6;
+    @apply gap-4 md:gap-6;
   }
 }

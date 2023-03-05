@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 import DropdownBtn from "./DropdownBtn";
+import { topics } from "../utils/filters";
 
 const DropdownContainer = () => {
   const [dropdown1, setDropdown1] = useState(false);
@@ -18,7 +19,6 @@ const DropdownContainer = () => {
   const [selected6, setSelected6] = useState("country");
 
   const handleDropdown = (dropdown, setDropdown) => setDropdown(!dropdown);
-  const topics = ["React JS", "Vue JS", "Angular JS"];
 
   return (
     <div>

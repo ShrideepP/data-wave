@@ -3,10 +3,9 @@ import Card from "./Card";
 
 const CardContainer = () => {
   return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-3 component-gap">
-      <Card title="Intensity" percentage="50%" />
-      <Card title="Relevance" percentage="75%" />
-      <Card title="Likelihood" percentage="100%" />
+    <div className="grid grid-cols-2 component-gap">
+      <Card title="Intensity" percentage={45} donutColor="#3b82f6" />
+      <Card title="Likelihood" percentage={75} donutColor="#f43f5e" />
     </div>
   );
 };

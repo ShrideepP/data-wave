@@ -9,7 +9,7 @@ const Home = () => {
   };
 
   return (
-    <section className="w-full h-[80vh] vertical-space horizontal-space overflow-y-hidden">
+    <section className="w-full h-[80vh] vertical-space horizontal-space overflow-y-scroll">
       <Masonry
         breakpointCols={breakpoints}
         className="my-masonry-grid"

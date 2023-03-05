@@ -1,0 +1,17 @@
+export const topics = [
+  "export",
+  "growth",
+  "oil",
+  "gas",
+  "fracking",
+  "war",
+  "energy",
+  "coal",
+  "security",
+  "money",
+  "car",
+  "pollution",
+  "economy",
+  "unemployment",
+  "market",
+];
