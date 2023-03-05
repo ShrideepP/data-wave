@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <nav className="w-full h-fit horizontal-space sticky top-0 left-0 border-b-2 border-tirtiary dark:border-dark-tirtiary bg-secondary dark:bg-dark-secondary">
-      <div className="w-full h-[10vh] flex justify-between items-center border-b border-tirtiary dark:border-dark-tirtiary">
+      <div className="w-full h-[10vh] flex justify-between items-center border-b-0 md:border-b border-tirtiary dark:border-dark-tirtiary">
         <div className="hidden md:flex items-center gap-x-2">
           <img src="/logo.png" alt="logo" className="w-8" />
           <h1 className="text-xl text-dominant dark:text-dark-dominant font-extrabold">
