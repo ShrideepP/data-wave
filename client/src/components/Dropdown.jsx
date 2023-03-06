@@ -19,9 +19,13 @@ const Dropdown = ({ children, handleDropdown, dropdown, setDropdown, selected,})
                 <AiFillCaretDown className={`text-sm text-dominant dark:text-dark-dominant ${dropdown && 'rotate-180'}`} />
             </button>
 
-            <div className={`w-full max-h-0 ${dropdown && 'max-h-[100rem]'} flex flex-wrap overflow-hidden whitespace-nowrap absolute top-full left-0 bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm`}>
-                { children }
-            </div>
+            {
+                dropdown
+                &&
+                <div className={`w-full h-fit flex flex-wrap overflow-hidden whitespace-nowrap absolute top-full left-0 bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm`}>
+                    { children }
+                </div>
+            }
 
         </div>
         
