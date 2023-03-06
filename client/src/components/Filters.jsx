@@ -1,12 +1,9 @@
 import React from "react";
-import DropdownContainer from "./DropdownContainer";
 import { BsFilterRight } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
+import DropdownContainer from "./DropdownContainer";
 
 const Filters = ({ slider, setSlider }) => {
-  const date = new Date();
-  const currentDate = date.toDateString();
-
   return (
     <div className="w-full h-fit z-50">
       <div className="h-[10vh] hidden md:flex justify-between items-center">
@@ -19,9 +16,6 @@ const Filters = ({ slider, setSlider }) => {
           </button>
           <DropdownContainer />
         </div>
-        <span className="text-sm text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase">
-          {currentDate}
-        </span>
       </div>
 
       <div
@@ -37,7 +31,7 @@ const Filters = ({ slider, setSlider }) => {
             </h1>
           </div>
           <button onClick={() => setSlider(!slider)}>
-            <AiOutlinePlus className="text-2xl text-dominant dark:text-dark-dominant rotate-45" />
+            <AiOutlinePlus className="text-4xl text-dominant dark:text-dark-dominant rotate-45" />
           </button>
         </div>
       </div>

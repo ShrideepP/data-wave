@@ -8,8 +8,10 @@ const Header = () => {
   const [slider, setSlider] = useState(false);
   const { theme, handleTheme } = ThemeContext();
 
+  const hamburgerColor = theme === "dark" ? "#F0F3FA" : "#0f172a";
+
   return (
-    <nav className="w-full h-fit horizontal-space sticky top-0 left-0 border-b-2 border-tirtiary dark:border-dark-tirtiary bg-secondary dark:bg-dark-secondary">
+    <nav className="w-full h-fit horizontal-space border-b-2 border-tirtiary dark:border-dark-tirtiary bg-secondary dark:bg-dark-secondary">
       <div className="w-full h-[10vh] flex justify-between items-center border-b-0 md:border-b border-tirtiary dark:border-dark-tirtiary">
         <div className="hidden md:flex items-center gap-x-2">
           <img src="/logo.png" alt="logo" className="w-8" />
@@ -21,7 +23,7 @@ const Header = () => {
         <button className="md:hidden">
           <Hamburger
             size={25}
-            color="#2563eb"
+            color={hamburgerColor}
             toggled={slider}
             toggle={setSlider}
           />

@@ -1,6 +1,5 @@
 import React from "react";
 import Masonry from "react-masonry-css";
-import CardContainer from "../components/CardContainer";
 
 const Home = () => {
   const breakpoints = {
@@ -9,14 +8,12 @@ const Home = () => {
   };
 
   return (
-    <section className="w-full h-[80vh] vertical-space horizontal-space overflow-y-scroll">
+    <section className="w-full h-fit vertical-space horizontal-space">
       <Masonry
         breakpointCols={breakpoints}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
-      >
-        <CardContainer />
-      </Masonry>
+      ></Masonry>
     </section>
   );
 };
