@@ -1,6 +1,5 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
-import CardsContainer from './CardsContainer';
 
 const DonutChart = () => {
 
@@ -8,11 +7,12 @@ const DonutChart = () => {
         chart: {
             type: 'donut',
         },
+        labels: ['Apple', 'Mango', 'Grapes', 'Banana'],
         stroke: {
             width: 0,
         },
         legend: {
-        show: false
+            show: false
         },
         plotOptions: {
             pie: {
@@ -32,7 +32,6 @@ const DonutChart = () => {
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 component-gap'>
-            <CardsContainer />
             <div className='bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
                 <div className='inner-space border-b border-tirtiary dark:border-dark-tirtiary'>
                     <h2 className='text-xs text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase'>
