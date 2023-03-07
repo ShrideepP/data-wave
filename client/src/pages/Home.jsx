@@ -1,6 +1,8 @@
 import React from "react";
 import Masonry from "react-masonry-css";
 import CardsContainer from "../components/CardsContainer";
+import PolarArea from '../components/PolarArea';
+import BarChart from '../components/BarChart';
 
 const Home = () => {
     const breakpoints = {
@@ -16,6 +18,8 @@ const Home = () => {
               columnClassName="my-masonry-grid_column"
             >
                 <CardsContainer />
+                <PolarArea />
+                <BarChart />
             </Masonry>
         </section>
     );

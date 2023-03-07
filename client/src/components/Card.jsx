@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({ title, percentage }) => {
     return (
-        <div className='space-y-6 text-center inner-space bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm'>
+        <div className='space-y-6 text-center inner-space bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
             <div className="space-y-2">
                 <h2 className='text-3xl text-dominant dark:text-dark-dominant font-semibold'>
                     {percentage}
