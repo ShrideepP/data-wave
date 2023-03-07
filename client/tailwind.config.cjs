@@ -12,7 +12,7 @@ module.exports = {
         secondary: "#FFF",
         tirtiary: "#E2E8F0",
         "dark-dominant": "#F0F3FA",
-        "dark-compliment": "#D6DEEA",
+        "dark-compliment": "#BCC9DC",
         "dark-primary": "#080E21",
         "dark-secondary": "#0C1531",
         "dark-tirtiary": "#142252",
