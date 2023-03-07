@@ -1,10 +1,11 @@
 import React from "react";
 import Masonry from "react-masonry-css";
 import CardsContainer from "../components/CardsContainer";
-import PolarArea from '../components/PolarArea';
+import DonutChart from '../components/Donut';
 import BarChart from '../components/BarChart';
 
 const Home = () => {
+
     const breakpoints = {
         default: 2,
         768: 1,
@@ -18,11 +19,12 @@ const Home = () => {
               columnClassName="my-masonry-grid_column"
             >
                 <CardsContainer />
-                <PolarArea />
+                <DonutChart />
                 <BarChart />
             </Masonry>
         </section>
     );
+    
 };
 
 export default Home;

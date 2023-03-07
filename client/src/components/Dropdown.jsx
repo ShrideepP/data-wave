@@ -22,7 +22,7 @@ const Dropdown = ({ children, handleDropdown, dropdown, setDropdown, selected,})
             {
                 dropdown
                 &&
-                <div className={`w-full h-fit flex flex-wrap overflow-hidden whitespace-nowrap absolute top-full left-0 bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm`}>
+                <div className={`w-full h-fit flex flex-wrap overflow-hidden whitespace-nowrap absolute top-full left-0 bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg`}>
                     { children }
                 </div>
             }

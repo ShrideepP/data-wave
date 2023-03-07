@@ -93,13 +93,13 @@ const BarChart = () => {
     }];
 
     return (
-        <div className='relative -z-20 bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
+        <div className='bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
             <div className='inner-space border-b border-tirtiary dark:border-dark-tirtiary'>
                 <h2 className='text-xs text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase'>
                     Bar Chart
                 </h2>
             </div>
-            <div className='-z-10'>
+            <div>
                 <Chart options={options} series={series} type='bar' width='100%' />
             </div>
         </div>
