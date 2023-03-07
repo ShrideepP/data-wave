@@ -1,7 +1,13 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
+import { ThemeContext } from '../context/ThemeContext';
 
 const BarChart = () => {
+
+    const { theme } = ThemeContext();
+    
+    const dominant = theme === 'light' ? "#0F172A" : "#F0F3FA";
+    const compliment = theme === 'light' ? "#1E293B" : "#D6DEEA";
 
     const options = {
         chart: {
@@ -11,11 +17,14 @@ const BarChart = () => {
                 show: false
             },
         },
+        fill: {
+            colors: ['#3b82f6']
+        },
         plotOptions: {
             bar: {
                 borderRadius: 0,
                 dataLabels: {
-                    position: 'top', // top, center, bottom
+                    position: 'top',
                 },
             },
         },
@@ -26,18 +35,25 @@ const BarChart = () => {
             },
             offsetY: -20,
             style: {
-                fontSize: '12px',
-                colors: ["#304758"],
+                fontSize: '14px',
+                colors: [compliment],
             },
         },
         xaxis: {
             categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            position: 'top',
+            labels: {
+                show: true,
+                style: {
+                    colors: new Array(12).fill(dominant),
+                    fontSize: '14px',
+                },
+            },
+            position: 'bottom',
             axisBorder: {
-                show: false
+                show: false,
             },
             axisTicks: {
-                show: false
+                show: false,
             },
             crosshairs: {
                 fill: {

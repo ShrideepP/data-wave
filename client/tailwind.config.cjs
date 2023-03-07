@@ -6,13 +6,11 @@ module.exports = {
     extend: {
       colors: {
         accent: "#3b82f6",
-        // Light Mode
-        dominant: "#0f172a",
-        compliment: "#1e293b",
-        primary: "#f1f5f9",
-        secondary: "#fff",
-        tirtiary: "#e2e8f0",
-        // Dark Mode
+        dominant: "#0F172A",
+        compliment: "#1E293B",
+        primary: "#F1F5F9",
+        secondary: "#FFF",
+        tirtiary: "#E2E8F0",
         "dark-dominant": "#F0F3FA",
         "dark-compliment": "#D6DEEA",
         "dark-primary": "#080E21",
