@@ -45,7 +45,7 @@ const BarChart = () => {
                 show: true,
                 style: {
                     colors: new Array(12).fill(dominant),
-                    fontSize: '14px',
+                    fontSize: '12px',
                 },
             },
             position: 'bottom',
@@ -93,13 +93,13 @@ const BarChart = () => {
     }];
 
     return (
-        <div className='bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
+        <div className='relative -z-20 bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
             <div className='inner-space border-b border-tirtiary dark:border-dark-tirtiary'>
                 <h2 className='text-xs text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase'>
                     Bar Chart
                 </h2>
             </div>
-            <div className='inner-space'>
+            <div className='-z-10'>
                 <Chart options={options} series={series} type='bar' width='100%' />
             </div>
         </div>
