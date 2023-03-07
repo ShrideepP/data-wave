@@ -1,6 +1,5 @@
 import React from "react";
 import Masonry from "react-masonry-css";
-import CardsContainer from "../components/CardsContainer";
 import DonutChart from '../components/Donut';
 import BarChart from '../components/BarChart';
 
@@ -18,9 +17,8 @@ const Home = () => {
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column"
             >
-                <CardsContainer />
-                <DonutChart />
                 <BarChart />
+                <DonutChart />
             </Masonry>
         </section>
     );

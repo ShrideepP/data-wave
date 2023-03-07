@@ -1,11 +1,10 @@
 import React from 'react';
 
-const DropdownButton = ({ btnText, setSelect, handleDropdown, dropdown, setDropdown, filterMethod }) => {
+const DropdownButton = ({ btnText, setSelect, handleDropdown, dropdown, setDropdown }) => {
 
     const handleClick = (event) => {
         setSelect(event.target.textContent);
         handleDropdown(dropdown, setDropdown);
-        filterMethod(event);
     };
 
     return (

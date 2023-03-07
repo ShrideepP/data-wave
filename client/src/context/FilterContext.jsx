@@ -30,51 +30,26 @@ export const FilterProvider = ({ children }) => {
   const [selected6, setSelected6] = useState(country[0]);
 
   const closeAllDropdowns = () => {
-    setDropdown1(false);
-    setDropdown2(false);
-    setDropdown3(false);
-    setDropdown4(false);
-    setDropdown5(false);
-    setDropdown6(false);
+      setDropdown1(false);
+      setDropdown2(false);
+      setDropdown3(false);
+      setDropdown4(false);
+      setDropdown5(false);
+      setDropdown6(false);
   };
 
   const handleDropdown = (dropdown, setDropdown) => {
-    closeAllDropdowns();
-    setDropdown(!dropdown);
-  };
-
-  const filterTopics = (event) => {
-    const value = event.target.textContent;
-    console.log(value);
-  };
-  
-  const filterSector = (event) => {
-    const value = event.target.textContent;
-  };
-
-  const filterPestle = (event) => {
-    const value = event.target.textContent;
-  };
-
-  const filterCountry = (event) => {
-    const value = event.target.textContent;
-  };
-
-  const filterRegion = (event) => {
-    const value = event.target.textContent;
-  };
-
-  const filterSource = (event) => {
-    const value = event.target.textContent;
+      closeAllDropdowns();
+      setDropdown(!dropdown);
   };
 
   const fetchData = async () => {
-    try {
-      const response = await axios.get(`${URL}/data`);
-      setData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
+      try {
+          const response = await axios.get(`${URL}/data`);
+          setData(response.data);
+      } catch (error) {
+          console.log(error);
+      };
   };
 
   useEffect(() => {
@@ -110,17 +85,12 @@ export const FilterProvider = ({ children }) => {
         setDropdown6,
         selected6,
         setSelected6,
-        filterCountry,
-        filterPestle,
-        filterRegion,
-        filterSector,
-        filterSource,
-        filterTopics,
       }}
     >
       {children}
     </Context.Provider>
   );
+  
 };
 
 export const FilterContext = () => useContext(Context);

@@ -14,7 +14,6 @@ const DropdownContainer = () => {
         dropdown4, setDropdown4, selected4, setSelected4,
         dropdown5, setDropdown5, selected5, setSelected5,
         dropdown6, setDropdown6, selected6, setSelected6,
-        filterCountry, filterPestle, filterRegion, filterSector, filterSource, filterTopics,
     } = FilterContext();
 
     return (
@@ -36,7 +35,6 @@ const DropdownContainer = () => {
                         selected={selected1}
                         setSelect={setSelected1} 
                         handleDropdown={handleDropdown}
-                        filterMethod={filterTopics} 
                     />
                 ))}
             </Dropdown>
@@ -56,7 +54,6 @@ const DropdownContainer = () => {
                         selected={selected2}
                         setSelect={setSelected2} 
                         handleDropdown={handleDropdown} 
-                        filterMethod={filterSector}
                     />
                 ))}
             </Dropdown>
@@ -76,7 +73,6 @@ const DropdownContainer = () => {
                         selected={selected3}
                         setSelect={setSelected3} 
                         handleDropdown={handleDropdown} 
-                        filterMethod={filterRegion}
                     />
                 ))}
             </Dropdown>
@@ -96,7 +92,6 @@ const DropdownContainer = () => {
                         selected={selected4}
                         setSelect={setSelected4} 
                         handleDropdown={handleDropdown}
-                        filterMethod={filterPestle} 
                     />
                 ))}
             </Dropdown>
@@ -116,7 +111,6 @@ const DropdownContainer = () => {
                         selected={selected5}
                         setSelect={setSelected5} 
                         handleDropdown={handleDropdown} 
-                        filterMethod={filterSource}
                     />
                 ))}
             </Dropdown>
@@ -136,7 +130,6 @@ const DropdownContainer = () => {
                         selected={selected6} 
                         setSelect={setSelected6} 
                         handleDropdown={handleDropdown} 
-                        filterMethod={filterCountry}
                     />
                 ))}
             </Dropdown>
