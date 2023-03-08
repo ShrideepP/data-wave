@@ -1,10 +1,12 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 import { ThemeContext } from '../context/ThemeContext';
+import { FilterContext } from '../context/FilterContext';
 
 const BarChart = () => {
 
     const { theme } = ThemeContext();
+    const { bar } = FilterContext();
     
     const dominant = theme === 'light' ? "#0F172A" : "#F0F3FA";
     const compliment = theme === 'light' ? "#1E293B" : "#D6DEEA";
@@ -88,7 +90,7 @@ const BarChart = () => {
     };
     
     const series = [{
-        name: 'Inflation',
+        name: 'INTENSITY',
         data: [2.3, 3.1, 4.0, 5, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2],
     }];
 
@@ -96,7 +98,7 @@ const BarChart = () => {
         <div className='bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
             <div className='inner-space border-b border-tirtiary dark:border-dark-tirtiary'>
                 <h2 className='text-xs text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase'>
-                    Bar Chart
+                    Sector + Intensity = Country
                 </h2>
             </div>
             <div>

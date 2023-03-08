@@ -11,9 +11,7 @@ const DropdownContainer = () => {
         dropdown1, setDropdown1, selected1, setSelected1, 
         dropdown2, setDropdown2, selected2, setSelected2,
         dropdown3, setDropdown3, selected3, setSelected3,
-        dropdown4, setDropdown4, selected4, setSelected4,
-        dropdown5, setDropdown5, selected5, setSelected5,
-        dropdown6, setDropdown6, selected6, setSelected6,
+        filterCountry, filterSector, filterRegion,
     } = FilterContext();
 
     return (
@@ -26,15 +24,15 @@ const DropdownContainer = () => {
                 setDropdown={setDropdown1} 
                 selected={selected1}
             >
-                {topics.map(item => (
+                {country.map(item => (
                     <DropdownButton 
                         key={item}
                         btnText={item} 
                         dropdown={dropdown1} 
-                        setDropdown={setDropdown1} 
-                        selected={selected1}
+                        setDropdown={setDropdown1}
                         setSelect={setSelected1} 
-                        handleDropdown={handleDropdown}
+                        handleDropdown={handleDropdown} 
+                        filter={filterCountry}
                     />
                 ))}
             </Dropdown>
@@ -51,9 +49,9 @@ const DropdownContainer = () => {
                         btnText={item} 
                         dropdown={dropdown2} 
                         setDropdown={setDropdown2} 
-                        selected={selected2}
                         setSelect={setSelected2} 
                         handleDropdown={handleDropdown} 
+                        filter={filterSector}
                     />
                 ))}
             </Dropdown>
@@ -70,66 +68,9 @@ const DropdownContainer = () => {
                         btnText={item} 
                         dropdown={dropdown3} 
                         setDropdown={setDropdown3} 
-                        selected={selected3}
                         setSelect={setSelected3} 
                         handleDropdown={handleDropdown} 
-                    />
-                ))}
-            </Dropdown>
-
-            <Dropdown 
-                handleDropdown={handleDropdown} 
-                dropdown={dropdown4} 
-                setDropdown={setDropdown4} 
-                selected={selected4}
-            >
-                {pestle.map(item => (
-                    <DropdownButton  
-                        key={item}
-                        btnText={item} 
-                        dropdown={dropdown4} 
-                        setDropdown={setDropdown4} 
-                        selected={selected4}
-                        setSelect={setSelected4} 
-                        handleDropdown={handleDropdown}
-                    />
-                ))}
-            </Dropdown>
-
-            <Dropdown 
-                handleDropdown={handleDropdown} 
-                dropdown={dropdown5} 
-                setDropdown={setDropdown5} 
-                selected={selected5}
-            >
-                {source.map(item => (
-                    <DropdownButton 
-                        key={item}
-                        btnText={item} 
-                        dropdown={dropdown5} 
-                        setDropdown={setDropdown5} 
-                        selected={selected5}
-                        setSelect={setSelected5} 
-                        handleDropdown={handleDropdown} 
-                    />
-                ))}
-            </Dropdown>
-
-            <Dropdown 
-                handleDropdown={handleDropdown} 
-                dropdown={dropdown6} 
-                setDropdown={setDropdown6} 
-                selected={selected6}
-            >
-                {country.map(item => (
-                    <DropdownButton 
-                        key={item}
-                        btnText={item} 
-                        dropdown={dropdown6} 
-                        setDropdown={setDropdown6}
-                        selected={selected6} 
-                        setSelect={setSelected6} 
-                        handleDropdown={handleDropdown} 
+                        filter={filterRegion}
                     />
                 ))}
             </Dropdown>

@@ -1,11 +1,8 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import axios from "axios";
+import axios, { isAxiosError } from "axios";
 import {
-  topics,
   sector,
   region,
-  pestle,
-  source,
   country,
 } from "../utils/filters";
 
@@ -13,29 +10,23 @@ const Context = createContext();
 const URL = import.meta.env.VITE_REACT_API_URL;
 
 export const FilterProvider = ({ children }) => {
-  const [data, setData] = useState([]);
+
+  const [bar, setBar] = useState([]);
+  const [line, setLine] = useState([]);
+  const [donut, setDonut] = useState([]);
 
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
   const [dropdown3, setDropdown3] = useState(false);
-  const [dropdown4, setDropdown4] = useState(false);
-  const [dropdown5, setDropdown5] = useState(false);
-  const [dropdown6, setDropdown6] = useState(false);
 
-  const [selected1, setSelected1] = useState(topics[0]);
+  const [selected1, setSelected1] = useState(country[0]);
   const [selected2, setSelected2] = useState(sector[0]);
   const [selected3, setSelected3] = useState(region[0]);
-  const [selected4, setSelected4] = useState(pestle[0]);
-  const [selected5, setSelected5] = useState(source[0]);
-  const [selected6, setSelected6] = useState(country[0]);
 
   const closeAllDropdowns = () => {
       setDropdown1(false);
       setDropdown2(false);
       setDropdown3(false);
-      setDropdown4(false);
-      setDropdown5(false);
-      setDropdown6(false);
   };
 
   const handleDropdown = (dropdown, setDropdown) => {
@@ -46,7 +37,9 @@ export const FilterProvider = ({ children }) => {
   const fetchData = async () => {
       try {
           const response = await axios.get(`${URL}/data`);
-          setData(response.data);
+          setBar(response.data.filter(item => item.intensity && item.sector && item.country));
+          setLine(response.data.filter(item => item.likelihood && item.end_year && item.sector));
+          setDonut(response.data.filter(item => item.relevance && item.topic && item.region));
       } catch (error) {
           console.log(error);
       };
@@ -56,10 +49,24 @@ export const FilterProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  const filterCountry = event => {
+    const value = event.target.textContent;
+    setBar(prevData => prevData.filter(item => item.country === value));
+  };
+  
+  const filterSector = event => {
+    const value = event.target.textContent;
+    setLine(prevData => prevData.filter(item => item.sector === value));
+  };
+  
+  const filterRegion = event => {
+    const value = event.target.textContent;
+    setDonut(prevData => prevData.filter(item => item.region === value));
+  };
+
   return (
     <Context.Provider
       value={{
-        data,
         handleDropdown,
         dropdown1,
         setDropdown1,
@@ -73,18 +80,12 @@ export const FilterProvider = ({ children }) => {
         setDropdown3,
         selected3,
         setSelected3,
-        dropdown4,
-        setDropdown4,
-        selected4,
-        setSelected4,
-        dropdown5,
-        setDropdown5,
-        selected5,
-        setSelected5,
-        dropdown6,
-        setDropdown6,
-        selected6,
-        setSelected6,
+        filterCountry,
+        filterSector,
+        filterRegion,
+        bar,
+        line,
+        donut,
       }}
     >
       {children}

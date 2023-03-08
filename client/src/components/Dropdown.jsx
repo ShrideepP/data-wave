@@ -11,7 +11,7 @@ const Dropdown = ({ children, handleDropdown, dropdown, setDropdown, selected,})
 
             <button
                 onClick={hadleClick}
-                className={`w-fit h-full px-4 flex items-center gap-x-4 ${dropdown && 'border-b-2'} border-accent`}
+                className={`w-fit h-full px-4 flex items-center gap-x-6 ${dropdown && 'border-b-2'} border-accent`}
             >
                 <span className="text-xs text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase">
                     {selected}

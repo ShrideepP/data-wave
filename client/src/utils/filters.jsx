@@ -1,6 +1,6 @@
 export const topics = ['export', 'growth', 'oil', 'gas', 'fracking', 'war', 'energy', 'coal', 'security', 'money', 'car', 'pollution', 'economy', 'unemployment', 'market', 'Washington', 'production', 'material', 'gdp', 'investment', 'government', 'consumer', 'robot', 'biofuel'];
 
-export const sector = ['Retail', 'Manufacturing', 'Financial services', 'Energy', 'Environment', 'Support services', 'Government, Information Technology, Media & entertainment, Aerospace & defence', 'Water, Food & Agriculture', 'Security', 'Transport', 'Healthcare', 'Construction', 'Automotive, Tourism & hospitality'];
+export const sector = ['Retail', 'Manufacturing', 'Financial services', 'Energy', 'Environment', 'Support services', 'Government', 'Information Technology', 'Media & entertainment', 'Aerospace & defence', 'Water', 'Food & Agriculture', 'Security', 'Transport', 'Healthcare', 'Construction', 'Automotive', 'Tourism & hospitality'];
 
 export const region = ['World', 'Northern America', 'Eastern Europe', 'Central America', 'Western Asia', 'Southern Asia', 'Europe', 'Western Africa', 'Asia', 'South-Eastern Asia', 'Eastern Asia', 'Oceania', 'Northern Africa', 'Southern Europe', 'Northern Europe', 'South America', 'Western Europe', 'Africa', 'Central Africa', 'Central Asia', 'Eastern Africa', 'Southern Africa'];
 

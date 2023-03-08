@@ -1,10 +1,12 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 import { ThemeContext } from '../context/ThemeContext';
+import { FilterContext } from '../context/FilterContext';
 
 const LineChart = () => {
 
     const { theme } = ThemeContext();
+    const { line } = FilterContext();
     
     const dominant = theme === 'light' ? "#0F172A" : "#F0F3FA";
     const compliment = theme === 'light' ? "#1E293B" : "#D6DEEA";
@@ -41,7 +43,7 @@ const LineChart = () => {
     };
 
     const series = [{
-        name: "STOCK ABC",
+        name: "LIKELIHOOD",
         data: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200],
     }];
 
@@ -49,7 +51,7 @@ const LineChart = () => {
         <div className='bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
             <div className='inner-space border-b border-tirtiary dark:border-dark-tirtiary'>
                 <h2 className='text-xs text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase'>
-                    Line Chart
+                    End Year + Likelihood = Sector
                 </h2>
             </div>
             <div>
