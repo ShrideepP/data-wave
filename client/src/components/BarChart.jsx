@@ -1,12 +1,10 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 import { ThemeContext } from '../context/ThemeContext';
-import { FilterContext } from '../context/FilterContext';
 
 const BarChart = () => {
 
     const { theme } = ThemeContext();
-    const { bar } = FilterContext();
     
     const dominant = theme === 'light' ? "#0F172A" : "#F0F3FA";
     const compliment = theme === 'light' ? "#1E293B" : "#D6DEEA";

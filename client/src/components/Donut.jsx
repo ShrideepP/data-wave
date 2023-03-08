@@ -1,10 +1,7 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { FilterContext } from '../context/FilterContext';
 
 const DonutChart = () => {
-
-    const { donut } = FilterContext();
 
     const options = {
         chart: {

@@ -34,44 +34,15 @@ export const FilterProvider = ({ children }) => {
       setDropdown(!dropdown);
   };
 
-  const fetchBarChartData = async () => {
-      try {
-          const response = await axios.get(`${URL}/data`);
-          setBar(response.data.filter(item => item.intensity && item.sector && item.country === selected1));
-        } catch (error) {
+  useEffect(() => {
+    axios.get(`${URL}/bar-chart`)
+        .then(response => {
+          setBar(response.data.filter(item => item.country === selected1));
+        })
+        .catch(error => {
           console.log(error);
-        };
-      };
-
-  const fetchLineChartData = async () => {
-    try {
-      const response = await axios.get(`${URL}/data`);
-      setLine(response.data.filter(item => item.likelihood && item.end_year && item.sector === selected2));
-    } catch (error) {
-      console.log(error)
-    };
-  };
-
-  const fetchDonutChartData = async () => {
-    try {
-      const response = await axios.get(`${URL}/data`);
-          setDonut(response.data.filter(item => item.relevance && item.topic && item.region === selected3));
-    } catch (error) {
-      console.log(error);
-    };
-  };
-
-  // useEffect(() => {
-  //   fetchBarChartData();
-  // }, [selected1]);
-
-  // useEffect(() => {
-  //   fetchLineChartData();
-  // }, [selected2]);
-
-  // useEffect(() => {
-  //   fetchDonutChartData();
-  // }, [selected3]);
+        });
+  }, [selected1]);
 
   console.log(bar);
 
@@ -110,8 +81,6 @@ export const FilterProvider = ({ children }) => {
         filterSector,
         filterRegion,
         bar,
-        line,
-        donut,
       }}
     >
       {children}
