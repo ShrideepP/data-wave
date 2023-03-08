@@ -39,7 +39,7 @@ const LineChart = () => {
                     fontSize: '12px',
                 },
             },
-        }
+        },
     };
 
     const series = [{

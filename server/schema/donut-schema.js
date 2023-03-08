@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const dashboardSchema = mongoose.Schema({
+const donutSchema = mongoose.Schema({
   end_year: String,
   intensity: Number,
   sector: String,
@@ -20,6 +20,6 @@ const dashboardSchema = mongoose.Schema({
   likelihood: Number,
 });
 
-const Data = mongoose.model("dashboard", dashboardSchema);
+const DonutChart = mongoose.model("donut-chart", donutSchema);
 
-module.exports = Data;
+module.exports = DonutChart;

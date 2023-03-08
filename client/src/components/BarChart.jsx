@@ -10,7 +10,7 @@ const BarChart = () => {
     
     const dominant = theme === 'light' ? "#0F172A" : "#F0F3FA";
     const compliment = theme === 'light' ? "#1E293B" : "#D6DEEA";
-
+    
     const options = {
         chart: {
             height: 350,
