@@ -49,7 +49,7 @@ const LineChart = () => {
             labels: {
                 show: true,
                 style: {
-                    colors: new Array(12).fill(dominant),
+                    colors: new Array(100).fill(dominant),
                     fontSize: '12px',
                 },
             },
