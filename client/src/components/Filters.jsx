@@ -6,6 +6,7 @@ import DropdownContainer from "./DropdownContainer";
 const Filters = ({ slider, setSlider }) => {
   return (
     <div className="w-full h-fit z-50">
+
       <div className="h-[10vh] hidden md:flex justify-between items-center">
         <div className="h-full flex gap-x-6">
           <button className="flex items-center gap-x-2 cursor-default">
@@ -34,7 +35,19 @@ const Filters = ({ slider, setSlider }) => {
             <AiOutlinePlus className="text-4xl text-dominant dark:text-dark-dominant rotate-45" />
           </button>
         </div>
+        <div className="h-[90vh] flex justify-center items-center flex-col text-center space-y-4 inner-space">
+          <div className="space-y-2">
+            <h2 className="text-base text-dominant dark:text-dark-dominant font-bold tracking-wider uppercase">
+              No filters available
+            </h2>
+            <hr className="w-24 h-[2px] mx-auto bg-accent border-0 rounded" />
+          </div>
+          <p className="text-sm text-compliment dark:text-dark-compliment font-medium">
+            Dashboard was getting messy so couldn't add filters here
+          </p>
+        </div>
       </div>
+
     </div>
   );
 };

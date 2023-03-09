@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import { ThemeContext } from '../context/ThemeContext';
+import { FilterContext } from '../context/FilterContext';
 
 const LineChart = () => {
 
     const { theme } = ThemeContext();
-    
+    const { selected2, line } = FilterContext();
+    const [endYear, setEndYear] = useState([]);
+    const [likelihood, setLikelihood] = useState([]);
+
+    useEffect(() => {
+        setEndYear(line.map(item => item.end_year));
+        setLikelihood(line.reduce((acc, curr) => {
+            const existing = acc.find(item => item.end_year === curr.end_year);
+            if (existing) {
+                existing.likelihood += curr.likelihood;
+            } else {
+                acc.push({ end_year: curr.end_year, likelihood: curr.likelihood });
+            }
+            return acc;
+        }, []));
+    }, [line]);
+
     const dominant = theme === 'light' ? "#0F172A" : "#F0F3FA";
-    const compliment = theme === 'light' ? "#1E293B" : "#D6DEEA";
 
     const options = {
         chart: {
@@ -29,7 +45,7 @@ const LineChart = () => {
             show: false
         },
         xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            categories: endYear.length ? endYear.filter((item, index) => endYear.indexOf(item) === index) : [2022, 2000, 2004, 2010, 2020],
             labels: {
                 show: true,
                 style: {
@@ -42,14 +58,14 @@ const LineChart = () => {
 
     const series = [{
         name: "LIKELIHOOD",
-        data: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200],
+        data: likelihood.length ? [...likelihood.map(item => item.likelihood)] : [15, 25, 60, 25, 55],
     }];
 
     return (
         <div className='bg-secondary dark:bg-dark-secondary border border-tirtiary dark:border-dark-tirtiary rounded-sm shadow-lg'>
             <div className='inner-space border-b border-tirtiary dark:border-dark-tirtiary'>
                 <h2 className='text-xs text-dominant dark:text-dark-dominant font-semibold tracking-wider uppercase'>
-                    End Year + Likelihood = Sector
+                    End year likelihood in {selected2}
                 </h2>
             </div>
             <div>

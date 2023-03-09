@@ -3,7 +3,7 @@ import Masonry from "react-masonry-css";
 import CardsContainer from '../components/CardsContainer';
 import LineChart from "../components/LineChart";
 import BarChart from '../components/BarChart';
-import DonutChart from '../components/Donut';
+import AreaChart from '../components/Area';
 
 const Home = () => {
 
@@ -22,7 +22,7 @@ const Home = () => {
                 <CardsContainer />
                 <LineChart />
                 <BarChart />
-                <DonutChart />
+                <AreaChart />
             </Masonry>
         </section>
     );

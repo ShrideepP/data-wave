@@ -73,5 +73,5 @@ module.exports = {
   insertLineData,
   getLineData,
   insertDonutData,
-  getDonutData
+  getDonutData,
 };

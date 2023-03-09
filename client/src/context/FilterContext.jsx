@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import axios, { isAxiosError } from "axios";
+import axios from "axios";
 import {
   sector,
   region,
@@ -44,7 +44,25 @@ export const FilterProvider = ({ children }) => {
         });
   }, [selected1]);
 
-  console.log(bar);
+  useEffect(() => {
+    axios.get(`${URL}/line-chart`)
+        .then(response => {
+          setLine(response.data.filter(item => item.sector === selected2));
+        })
+        .catch(error => {
+          console.log(error);
+        });
+  }, [selected2]);
+
+  useEffect(() => {
+    axios.get(`${URL}/donut-chart`)
+        .then(response => {
+          setDonut(response.data.filter(item => item.region === selected3));
+        })
+        .catch(error => {
+          console.log(error);
+        });
+  }, [selected3]);
 
   const filterCountry = event => {
     const value = event.target.textContent;
@@ -81,6 +99,8 @@ export const FilterProvider = ({ children }) => {
         filterSector,
         filterRegion,
         bar,
+        line,
+        donut
       }}
     >
       {children}
